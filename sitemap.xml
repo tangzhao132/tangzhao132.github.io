@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tangzhao132.github.io/2020/12/22/540-single-number-in-a-sorted-array/</loc>
+    
+    <lastmod>2020-12-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangzhao132.github.io/googlecefbc75ff41ebab9.html</loc>
+    
+    <lastmod>2020-12-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tangzhao132.github.io/2020/12/21/483-smallest-good-base/</loc>
     
     <lastmod>2020-12-20</lastmod>
@@ -60,7 +74,7 @@
 
   <url>
     <loc>https://tangzhao132.github.io/</loc>
-    <lastmod>2020-12-20</lastmod>
+    <lastmod>2020-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,14 +82,14 @@
   
   <url>
     <loc>https://tangzhao132.github.io/tags/leetcode/</loc>
-    <lastmod>2020-12-20</lastmod>
+    <lastmod>2020-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://tangzhao132.github.io/tags/binary-search/</loc>
-    <lastmod>2020-12-20</lastmod>
+    <lastmod>2020-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -84,7 +98,7 @@
   
   <url>
     <loc>https://tangzhao132.github.io/categories/leetcode/</loc>
-    <lastmod>2020-12-20</lastmod>
+    <lastmod>2020-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
