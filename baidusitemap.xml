@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tangzhao132.github.io/2020/12/28/LeetCode-1367-Linked-list-in-binary-tree/</loc>
+    <loc>https://tangzhao132.github.io/2020/12/28/1019/</loc>
     <lastmod>2020-12-28</lastmod>
   </url>
   <url>
-    <loc>https://tangzhao132.github.io/2020/12/28/1669-Merge-in-between-linked-lists/</loc>
+    <loc>https://tangzhao132.github.io/2020/12/28/1290/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://tangzhao132.github.io/2020/12/28/1669/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://tangzhao132.github.io/2020/12/28/1367/</loc>
     <lastmod>2020-12-28</lastmod>
   </url>
   <url>

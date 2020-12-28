@@ -138,10 +138,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://tangzhao132.github.io/2020/12/28/1669-Merge-in-between-linked-lists/">
+  <link rel="canonical" href="https://tangzhao132.github.io/2020/12/28/1019/">
   <title>
     
-    LeetCode 1669 Merge In Between Linked Lists - either thin | or die
+    LeetCode 1019 Convert Binary Number in a Linked List to Integer - either thin | or die
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -321,7 +321,7 @@
               <a class="tag" href="/tags/#linked list" title="linked list">linked list</a>
               
             </div>
-            <h1>LeetCode 1669 Merge In Between Linked Lists</h1>
+            <h1>LeetCode 1019 Convert Binary Number in a Linked List to Integer</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Martin on
@@ -337,7 +337,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">276</span> In Total
+              Words <span class="post-count">302</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -397,29 +397,35 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>You are given two linked lists: list1 and list2 of sizes n and m respectively.</p>
-<p>Remove list1’s nodes from the ath node to the bth node, and put list2 in their place.</p>
-<p>The blue edges and nodes in the following figure incidate the result:<br><img src="/_posts/leetcode/1669.png" alt="1669"></p>
-<p>Build the result list and return its head.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">list1</span> <span class="string">=</span> <span class="string">[0,1,2,3,4,5],</span> <span class="string">a</span> <span class="string">=</span> <span class="number">3</span><span class="string">,</span> <span class="string">b</span> <span class="string">=</span> <span class="number">4</span><span class="string">,</span> <span class="string">list2</span> <span class="string">=</span> <span class="string">[1000000,1000001,1000002]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[0,1,2,1000000,1000001,1000002,5]</span></span><br><span class="line"><span class="attr">Explanation:</span> <span class="string">We</span> <span class="string">remove</span> <span class="string">the</span> <span class="string">nodes</span> <span class="number">3</span> <span class="string">and</span> <span class="number">4</span> <span class="string">and</span> <span class="string">put</span> <span class="string">the</span> <span class="string">entire</span> <span class="string">list2</span> <span class="string">in</span> <span class="string">their</span> <span class="string">place.</span> <span class="string">The</span> <span class="string">blue</span> <span class="string">edges</span> <span class="string">and</span> <span class="string">nodes</span> <span class="string">in</span> <span class="string">the</span> <span class="string">above</span> <span class="string">figure</span> <span class="string">indicate</span> <span class="string">the</span> <span class="string">result.</span></span><br></pre></td></tr></table></figure>
+        <p>We are given a linked list with head as the first node.  Let’s number the nodes in the list: node_1, node_2, node_3, … etc.</p>
+<p>Each node may have a next larger value: for node_i, next_larger(node_i) is the node_j.val such that j &gt; i, node_j.val &gt; node_i.val, and j is the smallest possible choice.  If such a j does not exist, the next larger value is 0.</p>
+<p>Return an array of integers answer, where answer[i] = next_larger(node_{i+1}).</p>
+<p>Note that in the example inputs (not outputs) below, arrays such as [2,1,5] represent the serialization of a linked list with a head node value of 2, second node value of 1, and third node value of 5.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">[2,1,5]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[5,5,0]</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">list1</span> <span class="string">=</span> <span class="string">[0,1,2,3,4,5,6],</span> <span class="string">a</span> <span class="string">=</span> <span class="number">2</span><span class="string">,</span> <span class="string">b</span> <span class="string">=</span> <span class="number">5</span><span class="string">,</span> <span class="string">list2</span> <span class="string">=</span> <span class="string">[1000000,1000001,1000002,1000003,1000004]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[0,1,1000000,1000001,1000002,1000003,1000004,6]</span></span><br><span class="line"><span class="attr">Explanation:</span> <span class="string">The</span> <span class="string">blue</span> <span class="string">edges</span> <span class="string">and</span> <span class="string">nodes</span> <span class="string">in</span> <span class="string">the</span> <span class="string">above</span> <span class="string">figure</span> <span class="string">indicate</span> <span class="string">the</span> <span class="string">result.</span></span><br></pre></td></tr></table></figure>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">[2,7,4,3,5]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[7,0,5,5,0]</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints:"></a>Constraints:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="string">&lt;=</span> <span class="string">list1.length</span> <span class="string">&lt;=</span> <span class="number">104</span></span><br><span class="line"><span class="number">1</span> <span class="string">&lt;=</span> <span class="string">a</span> <span class="string">&lt;=</span> <span class="string">b</span> <span class="string">&lt;</span> <span class="string">list1.length</span> <span class="bullet">-</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="string">&lt;=</span> <span class="string">list2.length</span> <span class="string">&lt;=</span> <span class="number">104</span></span><br></pre></td></tr></table></figure>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3:"></a>Example 3:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">[1,7,5,1,9,2,5,1]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[7,9,9,9,0,5,0,0]</span></span><br></pre></td></tr></table></figure>
 
 
-<p>Find the start and end point in the list1, and the last node in list2(the head node is already known)</p>
-<p>Here’s my solution:</p>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1:"></a>Solution 1:</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line"><span class="symbol">public:</span></span><br><span class="line">    ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) &#123;</span><br><span class="line">        ListNode *tail = list2, *cur = list1, *s,*e;</span><br><span class="line">        <span class="keyword">while</span>(tail-&gt;<span class="keyword">next</span>) &#123;</span><br><span class="line">            tail = tail-&gt;<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(int i = <span class="number">1</span>; i &lt; a; i++) &#123;</span><br><span class="line">            cur = cur-&gt;<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        s = cur;</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt;= b-a; i++) &#123;</span><br><span class="line">            cur = cur-&gt;<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        e = cur;</span><br><span class="line">        s-&gt;<span class="keyword">next</span> = list2;</span><br><span class="line">        tail-&gt;<span class="keyword">next</span> = e-&gt;<span class="keyword">next</span>;</span><br><span class="line">        <span class="keyword">return</span> list1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="string">&lt;=</span> <span class="string">node.val</span> <span class="string">&lt;=</span> <span class="number">10</span><span class="string">^9</span> <span class="string">for</span> <span class="string">each</span> <span class="string">node</span> <span class="string">in</span> <span class="string">the</span> <span class="string">linked</span> <span class="string">list.</span></span><br><span class="line"><span class="string">The</span> <span class="string">given</span> <span class="string">list</span> <span class="string">has</span> <span class="string">length</span> <span class="string">in</span> <span class="string">the</span> <span class="string">range</span> <span class="string">[0,</span> <span class="number">10000</span><span class="string">].</span></span><br></pre></td></tr></table></figure>
+
+
+<p>Transfer the linked list to array, and then use a stack to record the index of decreasing values.<br>Here’s my solution:</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">nextLargerNodes</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; store;</span><br><span class="line">        ListNode *cur = head;</span><br><span class="line">        <span class="keyword">while</span>(cur) &#123;</span><br><span class="line">            store.push_back(cur-&gt;val);</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">res</span><span class="params">(store.<span class="built_in">size</span>(),<span class="number">0</span>)</span></span>;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; store.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span>(!s.empty() &amp;&amp; store[i] &gt; store[s.top()]) &#123;</span><br><span class="line">                <span class="keyword">int</span> idx = s.top();</span><br><span class="line">                res[idx] = store[i];</span><br><span class="line">                s.pop();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            s.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/2020/12/28/1669/" data-toggle="tooltip" data-placement="top" title="LeetCode 1669 Merge In Between Linked Lists">&larr; Previous Post</a>
+          </li>
+          
           
           <li class="next">
-            <a href="/2020/12/28/LeetCode-1367-Linked-list-in-binary-tree/" data-toggle="tooltip" data-placement="top" title="LeetCode 1367 Linked list in binary tree">Next Post &rarr;</a>
+            <a href="/2020/12/28/1290/" data-toggle="tooltip" data-placement="top" title="LeetCode 1290 Convert Binary Number in a Linked List to Integer">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -462,7 +468,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=LeetCode 1669 Merge In Between Linked Lists&body=Hi,I found this website and thought you might like it https://tangzhao132.github.io/2020/12/28/1669-Merge-in-between-linked-lists/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=LeetCode 1019 Convert Binary Number in a Linked List to Integer&body=Hi,I found this website and thought you might like it https://tangzhao132.github.io/2020/12/28/1019/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
