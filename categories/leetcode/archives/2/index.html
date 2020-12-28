@@ -138,10 +138,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://tangzhao132.github.io/2020/12/28/1367/">
+  <link rel="canonical" href="https://tangzhao132.github.io/categories/leetcode/archives/2/">
   <title>
     
-    LeetCode 1367 Linked list in binary tree - either thin | or die
+    either thin | or die
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -292,8 +292,8 @@
 
   <style type="text/css">
     header.intro-header {
-       /*post*/
-        background-image: url('/img/header_img/RainierMilkyWay.jpg');
+       /*page*/
+        background-image: url('/img/header_img/archive_bg2.jpg');
       
     }
 
@@ -315,40 +315,10 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="post-heading">
-            <div class="tags">
-              
-              <a class="tag" href="/tags/#linked list" title="linked list">linked list</a>
-              
-            </div>
-            <h1>LeetCode 1367 Linked list in binary tree</h1>
-            <h2 class="subheading"></h2>
-            <span class="meta">
-              Posted by Martin on
-              2020-12-28
-            </span>
-
-
-            
-            <!-- WordCount start -->
-            <div class="blank_box"></div>
-            <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
-            </span>
-            <div class="blank_box"></div>
-            <span class="meta">
-              Words <span class="post-count">297</span> In Total
-            </span>
-            <div class="blank_box"></div>
-            <!-- 不蒜子统计 start -->
-            <span class="meta">
-              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
-            </span>
-            <!-- 不蒜子统计 end -->
-            <!-- WordCount end -->
-            
-
-
+          <div class="site-heading">
+            <h1>Programmer Talks</h1>
+            <!--<hr class="small">-->
+            <span class="subheading">I&#39;m Martin, a programmer from China</span>
           </div>
           
         </div>
@@ -389,259 +359,395 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-	<!-- Modify by Yu-Hsuan Yen -->
-<!-- Post Content -->
-<article>
-  <div class="container">
-    <div class="row">
-      <!-- Post Container -->
-      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+	<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    
 
-        <p>Given a binary tree root and a linked list with head as the first node. </p>
-<p>Return True if all the elements in the linked list starting from the head correspond to some downward path connected in the binary tree otherwise return False.</p>
-<p>In this context downward path means a path that starts at some node and goes downwards.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><p><img src="1367.png" alt=""></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">head</span> <span class="string">=</span> <span class="string">[4,2,8],</span> <span class="string">root</span> <span class="string">=</span> <span class="string">[1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">Explanation:</span> <span class="string">Nodes</span> <span class="string">in</span> <span class="string">blue</span> <span class="string">form</span> <span class="string">a</span> <span class="string">subpath</span> <span class="string">in</span> <span class="string">the</span> <span class="string">binary</span> <span class="string">Tree.</span></span><br></pre></td></tr></table></figure>
+    <!-- USE SIDEBAR -->
+    <!-- Post Container -->
+    <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
 
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">head</span> <span class="string">=</span> <span class="string">[1,4,2,6],</span> <span class="string">root</span> <span class="string">=</span> <span class="string">[1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+      
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
 
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3:"></a>Example 3:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">head</span> <span class="string">=</span> <span class="string">[1,4,2,6,8],</span> <span class="string">root</span> <span class="string">=</span> <span class="string">[1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">Explanation:</span> <span class="string">There</span> <span class="string">is</span> <span class="literal">no</span> <span class="string">path</span> <span class="string">in</span> <span class="string">the</span> <span class="string">binary</span> <span class="string">tree</span> <span class="string">that</span> <span class="string">contains</span> <span class="string">all</span> <span class="string">the</span> <span class="string">elements</span> <span class="string">of</span> <span class="string">the</span> <span class="string">linked</span> <span class="string">list</span> <span class="string">from</span> <span class="string">head.</span></span><br></pre></td></tr></table></figure>
+      
 
-<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints:"></a>Constraints:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="string">&lt;=</span> <span class="string">node.val</span> <span class="string">&lt;=</span> <span class="number">100</span> <span class="string">for</span> <span class="string">each</span> <span class="string">node</span> <span class="string">in</span> <span class="string">the</span> <span class="string">linked</span> <span class="string">list</span> <span class="string">and</span> <span class="string">binary</span> <span class="string">tree.</span></span><br><span class="line"><span class="string">The</span> <span class="string">given</span> <span class="string">linked</span> <span class="string">list</span> <span class="string">will</span> <span class="string">contain</span> <span class="string">between</span> <span class="number">1</span> <span class="string">and</span> <span class="number">100</span> <span class="string">nodes.</span></span><br><span class="line"><span class="string">The</span> <span class="string">given</span> <span class="string">binary</span> <span class="string">tree</span> <span class="string">will</span> <span class="string">contain</span> <span class="string">between</span> <span class="number">1</span> <span class="string">and</span> <span class="number">2500</span> <span class="string">nodes.</span></span><br></pre></td></tr></table></figure>
+      <!-- 归档列表 -->
 
-
-
-
-<p>Here’s my solution:</p>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1:"></a>Solution 1:</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">bool</span> is<span class="constructor">SubPath(ListNode<span class="operator">*</span> <span class="params">head</span>, TreeNode<span class="operator">*</span> <span class="params">root</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) return <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(head-&gt;<span class="keyword">val</span><span class="operator"> == </span>root-&gt;<span class="keyword">val</span><span class="operator"> &amp;&amp; </span>is<span class="constructor">Path(<span class="params">head</span>, <span class="params">root</span>)</span>) return <span class="literal">true</span>;</span><br><span class="line">        return is<span class="constructor">SubPath(<span class="params">head</span>,<span class="params">root</span>-&gt;<span class="params">left</span>)</span><span class="operator"> || </span>is<span class="constructor">SubPath(<span class="params">head</span>,<span class="params">root</span>-&gt;<span class="params">right</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">bool</span> is<span class="constructor">Path(ListNode<span class="operator">*</span> <span class="params">head</span>, TreeNode<span class="operator">*</span> <span class="params">root</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!head) return <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(root<span class="operator"> &amp;&amp; </span>head-&gt;<span class="keyword">val</span><span class="operator"> == </span>root-&gt;<span class="keyword">val</span>) return is<span class="constructor">Path(<span class="params">head</span>-&gt;<span class="params">next</span>,<span class="params">root</span>-&gt;<span class="params">left</span>)</span><span class="operator"> || </span>is<span class="constructor">Path(<span class="params">head</span>-&gt;<span class="params">next</span>,<span class="params">root</span>-&gt;<span class="params">right</span>)</span>;</span><br><span class="line">        return <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-        <hr>
-        <!-- Pager -->
-        <ul class="pager">
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
+          <span class="tag-text">2020</span>
+        </span>
+        <ul>
           
-          <li class="previous">
-            <a href="/2020/12/28/23-Merge-k-sorted-lists/" data-toggle="tooltip" data-placement="top" title="Leetcode-143-Reorder-list">&larr; Previous Post</a>
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/28/23-Merge-k-sorted-lists/" style="color: #0085a1">
+              <span>
+                Leetcode-143-Reorder-list
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
           </li>
           
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/28/143-Reorder-list/" style="color: #0085a1">
+              <span>
+                Leetcode-143-Reorder-list
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
           
-          <li class="next">
-            <a href="/2020/12/28/1669/" data-toggle="tooltip" data-placement="top" title="LeetCode 1669 Merge In Between Linked Lists">Next Post &rarr;</a>
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/28/25/" style="color: #0085a1">
+              <span>
+                LeetCode 25 Reverse nodes in k group
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/28/1290/" style="color: #0085a1">
+              <span>
+                LeetCode 1290 Convert Binary Number in a Linked List to Integer
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/28/1019/" style="color: #0085a1">
+              <span>
+                LeetCode 1019 Next Greater Node In Linked List
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/28/1669/" style="color: #0085a1">
+              <span>
+                LeetCode 1669 Merge In Between Linked Lists
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/28/1367/" style="color: #0085a1">
+              <span>
+                LeetCode 1367 Linked list in binary tree
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/22/540-single-number-in-a-sorted-array/" style="color: #0085a1">
+              <span>
+                LeetCode 540 Single Element in a Sorted Array
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/21/483-smallest-good-base/" style="color: #0085a1">
+              <span>
+                LeetCode 483 Smallest Good Base
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/20/475-heaters/" style="color: #0085a1">
+              <span>
+                LeetCode 475 Heaters
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            12-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2020/12/19/all-in-one/" style="color: #0085a1">
+              <span>
+                Leetcode All In One
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
           </li>
           
         </ul>
+      </div>
+      
 
-        
-        <!-- tip start -->
-        <div class="tip">
-          <p>
-            If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
-          </p>
-        </div>
-        <!-- tip end -->
-        
 
-        
-        <!-- Sharing Srtart -->
-        <!-- Social Social Share Post -->
-<!-- Docs:https://github.com/overtrue/share.js -->
+    </div>
+  </div>
+</div>
 
-<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
-  <ul class="list-inline text-center social-share-ul">
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-twitter">
-        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a class="social-share-icon icon-wechat">
-        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-weibo">
-        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-qq">
-        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=LeetCode 1367 Linked list in binary tree&body=Hi,I found this website and thought you might like it https://tangzhao132.github.io/2020/12/28/1367/">
-        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
+
+      <!-- 如果开启评论功能 -->
+      
+    </div>
+
+    <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        
+<!-- <h5>VISITORS</h5> -->
+<h5><a href="/">VISITORS</a></h5>
+<div class="widget">
+  <span>
+    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+  </span>
+  <br />
+  <span>
+    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
+  </span>
+</div>
+
+
+        <hr>
+    
+        <!-- Featured Tags -->
+
+<section>
+  <!-- no hr -->
+  <h5><a href="/tags/">FEATURED TAGS</a></h5>
+  <div class="tags">
+    
+    
+    <a href="/tags/#leetcode" title="leetcode" rel="1">leetcode</a>
+    
+    
+    
+    <a href="/tags/#binary search" title="binary search" rel="3">binary search</a>
+    
+    
+    
+    <a href="/tags/#linked list" title="linked list" rel="7">linked list</a>
+    
+    
+  </div>
+</section>
+
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+  <h5><a href="/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+
+    
+    <img id="avatar_pic" src="/img/avatar/longroad.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
+    
+
+    
+    <p>A long and important road ahead...</p>
+    
+
+    <!-- SNS Link -->
+    <ul class="list-inline">
+      
+
+      
+      <li>
+        <a target="_blank" href="https://github.com/tangzhao132">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+    </ul>
+  </div>
+</section>
+
+        <hr>
+    
+        
+<!-- <h5>RECENT POSTS</h5> -->
+<h5><a href="/">RECENT POSTS</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="../../../../2020/12/28/143-Reorder-list/">
+      <li>Leetcode-143-Reorder-list</li>
+    </a>
+    
+    <a href="../../../../2020/12/28/23-Merge-k-sorted-lists/">
+      <li>Leetcode-143-Reorder-list</li>
+    </a>
+    
+    <a href="../../../../2020/12/28/1367/">
+      <li>LeetCode 1367 Linked list in binary tree</li>
+    </a>
+    
+    <a href="../../../../2020/12/28/1669/">
+      <li>LeetCode 1669 Merge In Between Linked Lists</li>
+    </a>
+    
+    <a href="../../../../2020/12/28/1019/">
+      <li>LeetCode 1019 Next Greater Node In Linked List</li>
+    </a>
+    
   </ul>
 </div>
 
-<!-- css & js -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
-<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
-        <!-- Sharing End -->
-        
         <hr>
-
-        <!-- comments start -->
-        <!-- 1. gitalk comment -->
-
-<!-- gitalk start -->
-<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
-
-<div id="gitalk-container"></div>
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
-<script src="/js/comment/gitalk.js"></script>
-
-<script>
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: '',
-    id: 'Mon Dec 28 2020 00:00:00 GMT+0800', // Ensure uniqueness and length less than 50
-    distractionFreeMode: false, // Facebook-like distraction free mode
-    perPage: 10 ,
-    pagerDirection: 'last',
-    createIssueManually: false ,
-    language: 'en'
-  });
-  gitalk.render('gitalk-container');
-
-  var gtFolded = () => {
-    setTimeout(function() {
-      let markdownBody = document.getElementsByClassName("markdown-body");
-      let list = Array.from(markdownBody);
-      list.forEach(item => {
-        if (item.clientHeight > 250) {
-          item.classList.add('gt-comment-body-folded');
-          item.style.maxHeight = '250px';
-          item.title = 'Click to Expand';
-          item.onclick = function() {
-            item.classList.remove('gt-comment-body-folded');
-            item.style.maxHeight = '';
-            item.title = '';
-            item.onclick = null;
-          };
-        }
-      })
-    }, 800);
-  }
-</script>
-
-<!-- gitalk end -->
-
-
-
-<!-- 2. gitment comment -->
-
-
-
-<!-- 3. disqus comment -->
-
-
-        <!-- comments end -->
-        <hr>
-
-      </div>
-
-      <!-- Catalog: Tabe of Content -->
-      <!-- Table of Contents -->
-
-
-      <!-- Sidebar Container -->
-      <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-        <!-- Featured Tags -->
-        
-        <section>
-          <!-- no hr -->
-          <h5>
-            <a href="/tags/">FEATURED TAGS</a>
-          </h5>
-          <div class="tags">
-            
-            <a class="tag" href="/tags/#linked list" title="linked list">linked list</a>
-            
-          </div>
-        </section>
-        
-
+    
         <!-- Friends Blog -->
-        
+
+<!-- <h5>FRIENDS</h5> -->
+<h5><a href="/">FRIENDS</a></h5>
+<ul class="list-inline">
+  
+  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
+  
+  <li><a href="https://leetcode.com" target="_blank">leetcode</a></li>
+  
+</ul>
+
+
         <hr>
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-
-          
-          <li>
-            <a href="https://hexo.io/" target="_blank">Hexo</a>
-          </li>
-          
-          <li>
-            <a href="https://leetcode.com" target="_blank">leetcode</a>
-          </li>
-          
-        </ul>
+    
         
-      </div>
+    <!-- <h5>ARCHIVES</h5> -->
+    <h5><a href="/archives/">ARCHIVES</a></h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li></ul>
     </div>
+
+
+        <hr>
+    
+        <!-- Categories -->
+
+<!-- <h5>categories</h5> -->
+<h5><a href="/categories/">CATEGORIES</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="/categories/#leetcode">
+      <li>leetcode</li>
+    </a>
+    
+  </ul>
+</div>
+
+
+        <hr>
+    
+</div>
+
+    
   </div>
-</article>
-
-
-
-<!-- anchorjs start -->
-<!-- async load function -->
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script type="text/javascript">
-  // async load function
-  function async (u, c) {
-    var d = document,
-      t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) {
-      o.addEventListener('load', function(e) {
-        c(null, e);
-      }, false);
-    }
-    s.parentNode.insertBefore(o, s);
-  };
-</script>
-<script type="text/javascript">
-  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
-  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
-    anchors.options = {
-      visible: 'hover',
-      placement: 'left',
-      // icon: 'ℬ'
-      icon: '❡'
-    };
-    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-  });
-</script>
-<style>
-  /* place left on bigger screen */
-  @media all and (min-width: 800px) {
-    .anchorjs-link {
-      position: absolute;
-      left: -0.75em;
-      font-size: 1.1em;
-      margin-top: -0.1em;
-    }
-  }
-</style>
-
-<!-- anchorjs end -->
-
+</div>
 
 
 	<!-- Footer (contains ThemeColor、viewer) -->

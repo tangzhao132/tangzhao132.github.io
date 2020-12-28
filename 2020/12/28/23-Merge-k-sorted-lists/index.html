@@ -138,10 +138,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://tangzhao132.github.io/2020/12/28/1367/">
+  <link rel="canonical" href="https://tangzhao132.github.io/2020/12/28/23-Merge-k-sorted-lists/">
   <title>
     
-    LeetCode 1367 Linked list in binary tree - either thin | or die
+    Leetcode-143-Reorder-list - either thin | or die
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -321,7 +321,7 @@
               <a class="tag" href="/tags/#linked list" title="linked list">linked list</a>
               
             </div>
-            <h1>LeetCode 1367 Linked list in binary tree</h1>
+            <h1>Leetcode-143-Reorder-list</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Martin on
@@ -337,7 +337,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">297</span> In Total
+              Words <span class="post-count">198</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -397,23 +397,14 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>Given a binary tree root and a linked list with head as the first node. </p>
-<p>Return True if all the elements in the linked list starting from the head correspond to some downward path connected in the binary tree otherwise return False.</p>
-<p>In this context downward path means a path that starts at some node and goes downwards.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><p><img src="1367.png" alt=""></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">head</span> <span class="string">=</span> <span class="string">[4,2,8],</span> <span class="string">root</span> <span class="string">=</span> <span class="string">[1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">Explanation:</span> <span class="string">Nodes</span> <span class="string">in</span> <span class="string">blue</span> <span class="string">form</span> <span class="string">a</span> <span class="string">subpath</span> <span class="string">in</span> <span class="string">the</span> <span class="string">binary</span> <span class="string">Tree.</span></span><br></pre></td></tr></table></figure>
+        <p>You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.</p>
+<p>Merge all the linked-lists into one sorted linked-list and return it.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">lists</span> <span class="string">=</span> <span class="string">[[1,4,5],[1,3,4],[2,6]]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[1,1,2,3,4,4,5,6]</span></span><br><span class="line"><span class="attr">Explanation: The linked-lists are:</span></span><br><span class="line"><span class="string">[</span></span><br><span class="line">  <span class="number">1</span><span class="string">-&gt;4-&gt;5,</span></span><br><span class="line">  <span class="number">1</span><span class="string">-&gt;3-&gt;4,</span></span><br><span class="line">  <span class="number">2</span><span class="string">-&gt;6</span></span><br><span class="line"><span class="string">]</span></span><br><span class="line"><span class="attr">merging them into one sorted list:</span></span><br><span class="line"><span class="number">1</span><span class="string">-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">head</span> <span class="string">=</span> <span class="string">[1,4,2,6],</span> <span class="string">root</span> <span class="string">=</span> <span class="string">[1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3:"></a>Example 3:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">head</span> <span class="string">=</span> <span class="string">[1,4,2,6,8],</span> <span class="string">root</span> <span class="string">=</span> <span class="string">[1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">Explanation:</span> <span class="string">There</span> <span class="string">is</span> <span class="literal">no</span> <span class="string">path</span> <span class="string">in</span> <span class="string">the</span> <span class="string">binary</span> <span class="string">tree</span> <span class="string">that</span> <span class="string">contains</span> <span class="string">all</span> <span class="string">the</span> <span class="string">elements</span> <span class="string">of</span> <span class="string">the</span> <span class="string">linked</span> <span class="string">list</span> <span class="string">from</span> <span class="string">head.</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints:"></a>Constraints:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="string">&lt;=</span> <span class="string">node.val</span> <span class="string">&lt;=</span> <span class="number">100</span> <span class="string">for</span> <span class="string">each</span> <span class="string">node</span> <span class="string">in</span> <span class="string">the</span> <span class="string">linked</span> <span class="string">list</span> <span class="string">and</span> <span class="string">binary</span> <span class="string">tree.</span></span><br><span class="line"><span class="string">The</span> <span class="string">given</span> <span class="string">linked</span> <span class="string">list</span> <span class="string">will</span> <span class="string">contain</span> <span class="string">between</span> <span class="number">1</span> <span class="string">and</span> <span class="number">100</span> <span class="string">nodes.</span></span><br><span class="line"><span class="string">The</span> <span class="string">given</span> <span class="string">binary</span> <span class="string">tree</span> <span class="string">will</span> <span class="string">contain</span> <span class="string">between</span> <span class="number">1</span> <span class="string">and</span> <span class="number">2500</span> <span class="string">nodes.</span></span><br></pre></td></tr></table></figure>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> <span class="string">lists</span> <span class="string">=</span> <span class="string">[]</span></span><br><span class="line"><span class="attr">Output:</span> <span class="string">[]</span></span><br></pre></td></tr></table></figure>
 
 
-
-
-<p>Here’s my solution:</p>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1:"></a>Solution 1:</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">bool</span> is<span class="constructor">SubPath(ListNode<span class="operator">*</span> <span class="params">head</span>, TreeNode<span class="operator">*</span> <span class="params">root</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) return <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(head-&gt;<span class="keyword">val</span><span class="operator"> == </span>root-&gt;<span class="keyword">val</span><span class="operator"> &amp;&amp; </span>is<span class="constructor">Path(<span class="params">head</span>, <span class="params">root</span>)</span>) return <span class="literal">true</span>;</span><br><span class="line">        return is<span class="constructor">SubPath(<span class="params">head</span>,<span class="params">root</span>-&gt;<span class="params">left</span>)</span><span class="operator"> || </span>is<span class="constructor">SubPath(<span class="params">head</span>,<span class="params">root</span>-&gt;<span class="params">right</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">bool</span> is<span class="constructor">Path(ListNode<span class="operator">*</span> <span class="params">head</span>, TreeNode<span class="operator">*</span> <span class="params">root</span>)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!head) return <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(root<span class="operator"> &amp;&amp; </span>head-&gt;<span class="keyword">val</span><span class="operator"> == </span>root-&gt;<span class="keyword">val</span>) return is<span class="constructor">Path(<span class="params">head</span>-&gt;<span class="params">next</span>,<span class="params">root</span>-&gt;<span class="params">left</span>)</span><span class="operator"> || </span>is<span class="constructor">Path(<span class="params">head</span>-&gt;<span class="params">next</span>,<span class="params">root</span>-&gt;<span class="params">right</span>)</span>;</span><br><span class="line">        return <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h3><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">    struct cmp &#123;</span><br><span class="line">        <span class="keyword">bool</span> operator() (ListNode *a, ListNode *b) &#123;</span><br><span class="line">        <span class="keyword">return</span> a-&gt;val &gt; b-&gt;val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    ListNode* mergeKLists(vector&lt;ListNode*&gt;&amp; lists) &#123;</span><br><span class="line">        priority_queue&lt;ListNode*, vector&lt;ListNode*&gt;,cmp&gt; my_queue;</span><br><span class="line">        <span class="keyword">for</span>(ListNode* l : lists) &#123;</span><br><span class="line">            <span class="keyword">if</span>(l) my_queue.push(l);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(my_queue.<span class="keyword">empty</span>()) <span class="keyword">return</span> <span class="keyword">NULL</span>;</span><br><span class="line">        </span><br><span class="line">        ListNode *head = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode *cur = head;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(!my_queue.<span class="keyword">empty</span>()) &#123;</span><br><span class="line">            ListNode *t = my_queue.top();</span><br><span class="line">            my_queue.pop();</span><br><span class="line">            cur-&gt;next = t;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(cur-&gt;next) my_queue.push(cur-&gt;next);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         <hr>
@@ -421,12 +412,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2020/12/28/23-Merge-k-sorted-lists/" data-toggle="tooltip" data-placement="top" title="Leetcode-143-Reorder-list">&larr; Previous Post</a>
+            <a href="/2020/12/28/143-Reorder-list/" data-toggle="tooltip" data-placement="top" title="Leetcode-143-Reorder-list">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2020/12/28/1669/" data-toggle="tooltip" data-placement="top" title="LeetCode 1669 Merge In Between Linked Lists">Next Post &rarr;</a>
+            <a href="/2020/12/28/1367/" data-toggle="tooltip" data-placement="top" title="LeetCode 1367 Linked list in binary tree">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -469,7 +460,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=LeetCode 1367 Linked list in binary tree&body=Hi,I found this website and thought you might like it https://tangzhao132.github.io/2020/12/28/1367/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Leetcode-143-Reorder-list&body=Hi,I found this website and thought you might like it https://tangzhao132.github.io/2020/12/28/23-Merge-k-sorted-lists/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -502,7 +493,7 @@
     repo: '',
     owner: '',
     admin: '',
-    id: 'Mon Dec 28 2020 00:00:00 GMT+0800', // Ensure uniqueness and length less than 50
+    id: 'Mon Dec 28 2020 21:13:39 GMT+0800', // Ensure uniqueness and length less than 50
     distractionFreeMode: false, // Facebook-like distraction free mode
     perPage: 10 ,
     pagerDirection: 'last',
